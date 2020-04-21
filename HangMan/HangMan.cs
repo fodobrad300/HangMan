@@ -224,7 +224,7 @@ namespace HangMan
                     gameTmr.Stop();
                 }
             }
-            //will eventually prompt to exit program
+            //Will eventually prompt to exit program
             else
             {
 
