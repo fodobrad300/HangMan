@@ -33,13 +33,18 @@
             this.prefBtn = new System.Windows.Forms.Button();
             this.playBtn = new System.Windows.Forms.Button();
             this.prefPnl = new System.Windows.Forms.Panel();
+            this.prefMenuLbl = new System.Windows.Forms.Label();
             this.gamePnl = new System.Windows.Forms.Panel();
+            this.gameWordLbl = new System.Windows.Forms.Label();
+            this.wordLbl = new System.Windows.Forms.Label();
+            this.guessTxt = new System.Windows.Forms.TextBox();
+            this.guessLbl = new System.Windows.Forms.Label();
+            this.timeLbl = new System.Windows.Forms.Label();
             this.guessLetterLbl = new System.Windows.Forms.Label();
             this.guessWordLbl = new System.Windows.Forms.Label();
             this.wordListbx = new System.Windows.Forms.ListBox();
             this.hangManPic = new System.Windows.Forms.PictureBox();
             this.letterListbx = new System.Windows.Forms.ListBox();
-            this.prefMenuLbl = new System.Windows.Forms.Label();
             this.gameTmr = new System.Windows.Forms.Timer(this.components);
             this.prefPnl.SuspendLayout();
             this.gamePnl.SuspendLayout();
@@ -87,8 +92,26 @@
             this.prefPnl.TabIndex = 3;
             this.prefPnl.Visible = false;
             // 
+            // prefMenuLbl
+            // 
+            this.prefMenuLbl.AutoSize = true;
+            this.prefMenuLbl.Font = new System.Drawing.Font("Unispace", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prefMenuLbl.Location = new System.Drawing.Point(9, 15);
+            this.prefMenuLbl.Name = "prefMenuLbl";
+            this.prefMenuLbl.Size = new System.Drawing.Size(238, 24);
+            this.prefMenuLbl.TabIndex = 0;
+            this.prefMenuLbl.Text = "Return to Main Menu";
+            this.prefMenuLbl.Click += new System.EventHandler(this.prefMenuLbl_Click);
+            this.prefMenuLbl.MouseEnter += new System.EventHandler(this.prefMenuLbl_MouseEnter);
+            this.prefMenuLbl.MouseLeave += new System.EventHandler(this.prefMenuLbl_MouseLeave);
+            // 
             // gamePnl
             // 
+            this.gamePnl.Controls.Add(this.gameWordLbl);
+            this.gamePnl.Controls.Add(this.wordLbl);
+            this.gamePnl.Controls.Add(this.guessTxt);
+            this.gamePnl.Controls.Add(this.guessLbl);
+            this.gamePnl.Controls.Add(this.timeLbl);
             this.gamePnl.Controls.Add(this.guessLetterLbl);
             this.gamePnl.Controls.Add(this.guessWordLbl);
             this.gamePnl.Controls.Add(this.wordListbx);
@@ -97,13 +120,68 @@
             this.gamePnl.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gamePnl.Location = new System.Drawing.Point(0, 0);
             this.gamePnl.Name = "gamePnl";
-            this.gamePnl.Size = new System.Drawing.Size(900, 505);
+            this.gamePnl.Size = new System.Drawing.Size(900, 602);
             this.gamePnl.TabIndex = 4;
             this.gamePnl.Visible = false;
+            // 
+            // gameWordLbl
+            // 
+            this.gameWordLbl.AutoSize = true;
+            this.gameWordLbl.Font = new System.Drawing.Font("Unispace", 18F, System.Drawing.FontStyle.Bold);
+            this.gameWordLbl.Location = new System.Drawing.Point(21, 437);
+            this.gameWordLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.gameWordLbl.Name = "gameWordLbl";
+            this.gameWordLbl.Size = new System.Drawing.Size(0, 43);
+            this.gameWordLbl.TabIndex = 9;
+            // 
+            // wordLbl
+            // 
+            this.wordLbl.AutoSize = true;
+            this.wordLbl.Font = new System.Drawing.Font("Unispace", 20F, System.Drawing.FontStyle.Bold);
+            this.wordLbl.Location = new System.Drawing.Point(18, 358);
+            this.wordLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.wordLbl.Name = "wordLbl";
+            this.wordLbl.Size = new System.Drawing.Size(140, 48);
+            this.wordLbl.TabIndex = 8;
+            this.wordLbl.Text = "Word:";
+            // 
+            // guessTxt
+            // 
+            this.guessTxt.Font = new System.Drawing.Font("Unispace", 10F, System.Drawing.FontStyle.Bold);
+            this.guessTxt.Location = new System.Drawing.Point(520, 363);
+            this.guessTxt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guessTxt.Name = "guessTxt";
+            this.guessTxt.Size = new System.Drawing.Size(228, 31);
+            this.guessTxt.TabIndex = 7;
+            this.guessTxt.Text = "Enter a guess here";
+            this.guessTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.guessTxt_KeyPress);
+            // 
+            // guessLbl
+            // 
+            this.guessLbl.AutoSize = true;
+            this.guessLbl.Font = new System.Drawing.Font("Unispace", 14F, System.Drawing.FontStyle.Bold);
+            this.guessLbl.Location = new System.Drawing.Point(514, 322);
+            this.guessLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.guessLbl.Name = "guessLbl";
+            this.guessLbl.Size = new System.Drawing.Size(117, 34);
+            this.guessLbl.TabIndex = 6;
+            this.guessLbl.Text = "Guess:";
+            // 
+            // timeLbl
+            // 
+            this.timeLbl.AutoSize = true;
+            this.timeLbl.Font = new System.Drawing.Font("Unispace", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeLbl.Location = new System.Drawing.Point(832, 552);
+            this.timeLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.timeLbl.Name = "timeLbl";
+            this.timeLbl.Size = new System.Drawing.Size(97, 39);
+            this.timeLbl.TabIndex = 5;
+            this.timeLbl.Text = "0:00";
             // 
             // guessLetterLbl
             // 
             this.guessLetterLbl.AutoSize = true;
+            this.guessLetterLbl.Font = new System.Drawing.Font("Unispace", 9.75F, System.Drawing.FontStyle.Bold);
             this.guessLetterLbl.Location = new System.Drawing.Point(700, 22);
             this.guessLetterLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.guessLetterLbl.Name = "guessLetterLbl";
@@ -134,10 +212,13 @@
             // 
             // hangManPic
             // 
-            this.hangManPic.Location = new System.Drawing.Point(14, 22);
+            this.hangManPic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.hangManPic.Image = global::HangMan.Properties.Resources.Wumpus;
+            this.hangManPic.Location = new System.Drawing.Point(4, 14);
             this.hangManPic.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.hangManPic.Name = "hangManPic";
-            this.hangManPic.Size = new System.Drawing.Size(486, 298);
+            this.hangManPic.Size = new System.Drawing.Size(486, 297);
+            this.hangManPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.hangManPic.TabIndex = 1;
             this.hangManPic.TabStop = false;
             // 
@@ -152,38 +233,25 @@
             this.letterListbx.Size = new System.Drawing.Size(178, 165);
             this.letterListbx.TabIndex = 0;
             // 
-            // prefMenuLbl
-            // 
-            this.prefMenuLbl.AutoSize = true;
-            this.prefMenuLbl.Font = new System.Drawing.Font("Unispace", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.prefMenuLbl.Location = new System.Drawing.Point(9, 15);
-            this.prefMenuLbl.Name = "prefMenuLbl";
-            this.prefMenuLbl.Size = new System.Drawing.Size(238, 24);
-            this.prefMenuLbl.TabIndex = 0;
-            this.prefMenuLbl.Text = "Return to Main Menu";
-            this.prefMenuLbl.Click += new System.EventHandler(this.prefMenuLbl_Click);
-            this.prefMenuLbl.MouseEnter += new System.EventHandler(this.prefMenuLbl_MouseEnter);
-            this.prefMenuLbl.MouseLeave += new System.EventHandler(this.prefMenuLbl_MouseLeave);
-            // 
             // gameTmr
             // 
-            this.gameTmr.Interval = 10;
+            this.gameTmr.Interval = 1000;
             this.gameTmr.Tick += new System.EventHandler(this.gameTmr_Tick);
             // 
             // HangMan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 600);
+            this.ClientSize = new System.Drawing.Size(900, 598);
             this.Controls.Add(this.gamePnl);
             this.Controls.Add(this.prefPnl);
             this.Controls.Add(this.playBtn);
             this.Controls.Add(this.prefBtn);
             this.Controls.Add(this.titleLbl);
             this.KeyPreview = true;
-            this.MinimumSize = new System.Drawing.Size(800, 600);
+            this.MinimumSize = new System.Drawing.Size(798, 591);
             this.Name = "HangMan";
-            this.Text = "Form1";
+            this.Text = "Ultimate Hangman";
             this.Load += new System.EventHandler(this.HangMan_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HangMan_KeyPress);
             this.Resize += new System.EventHandler(this.HangMan_Resize);
@@ -211,6 +279,11 @@
         private System.Windows.Forms.ListBox wordListbx;
         private System.Windows.Forms.PictureBox hangManPic;
         private System.Windows.Forms.ListBox letterListbx;
+        private System.Windows.Forms.Label timeLbl;
+        private System.Windows.Forms.Label guessLbl;
+        private System.Windows.Forms.Label wordLbl;
+        private System.Windows.Forms.TextBox guessTxt;
+        private System.Windows.Forms.Label gameWordLbl;
     }
 }
 
