@@ -35,6 +35,7 @@
             this.prefPnl = new System.Windows.Forms.Panel();
             this.prefMenuLbl = new System.Windows.Forms.Label();
             this.gamePnl = new System.Windows.Forms.Panel();
+            this.strikeLbl = new System.Windows.Forms.Label();
             this.gameWordLbl = new System.Windows.Forms.Label();
             this.wordLbl = new System.Windows.Forms.Label();
             this.guessTxt = new System.Windows.Forms.TextBox();
@@ -46,6 +47,7 @@
             this.hangManPic = new System.Windows.Forms.PictureBox();
             this.letterListbx = new System.Windows.Forms.ListBox();
             this.gameTmr = new System.Windows.Forms.Timer(this.components);
+            this.guessTmr = new System.Windows.Forms.Timer(this.components);
             this.prefPnl.SuspendLayout();
             this.gamePnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hangManPic)).BeginInit();
@@ -107,6 +109,7 @@
             // 
             // gamePnl
             // 
+            this.gamePnl.Controls.Add(this.strikeLbl);
             this.gamePnl.Controls.Add(this.gameWordLbl);
             this.gamePnl.Controls.Add(this.wordLbl);
             this.gamePnl.Controls.Add(this.guessTxt);
@@ -123,6 +126,17 @@
             this.gamePnl.Size = new System.Drawing.Size(900, 602);
             this.gamePnl.TabIndex = 4;
             this.gamePnl.Visible = false;
+            // 
+            // strikeLbl
+            // 
+            this.strikeLbl.AutoSize = true;
+            this.strikeLbl.Font = new System.Drawing.Font("Unispace", 14F, System.Drawing.FontStyle.Bold);
+            this.strikeLbl.Location = new System.Drawing.Point(514, 414);
+            this.strikeLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.strikeLbl.Name = "strikeLbl";
+            this.strikeLbl.Size = new System.Drawing.Size(151, 34);
+            this.strikeLbl.TabIndex = 10;
+            this.strikeLbl.Text = "Strikes:";
             // 
             // gameWordLbl
             // 
@@ -153,7 +167,6 @@
             this.guessTxt.Name = "guessTxt";
             this.guessTxt.Size = new System.Drawing.Size(228, 31);
             this.guessTxt.TabIndex = 7;
-            this.guessTxt.Text = "Enter a guess here";
             this.guessTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.guessTxt_KeyPress);
             // 
             // guessLbl
@@ -238,6 +251,11 @@
             this.gameTmr.Interval = 1000;
             this.gameTmr.Tick += new System.EventHandler(this.gameTmr_Tick);
             // 
+            // guessTmr
+            // 
+            this.guessTmr.Interval = 1000;
+            this.guessTmr.Tick += new System.EventHandler(this.guessTmr_Tick);
+            // 
             // HangMan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -284,6 +302,8 @@
         private System.Windows.Forms.Label wordLbl;
         private System.Windows.Forms.TextBox guessTxt;
         private System.Windows.Forms.Label gameWordLbl;
+        private System.Windows.Forms.Label strikeLbl;
+        private System.Windows.Forms.Timer guessTmr;
     }
 }
 

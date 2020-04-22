@@ -14,11 +14,12 @@ namespace HangMan
     {
         //declare all variables + create all lists
         bool play = false;
+        bool hold = false;
         int time = 0;
         int minute = 0;
         int strike = 0;
         string word;
-        List<string> words = new List<string>() { "BRADY"};
+        List<string> words = new List<string>() { "BRADY", "COMPUTER", "ALDWORTH"};
         List<string> guessedWords = new List<string>();
         List<string> guessedLetters = new List<string>();
         List<string> letters = new List<string>();
@@ -86,6 +87,9 @@ namespace HangMan
 
             gameWordLbl.Font = new System.Drawing.Font("Unispace", (18 + xMod / (600 / 16)), System.Drawing.FontStyle.Bold);
             gameWordLbl.Location = new System.Drawing.Point(wordLbl.Location.X, wordLbl.Location.Y + 30);
+
+            strikeLbl.Font = new System.Drawing.Font("Unispace", (14 + xMod / (600 / 16)), System.Drawing.FontStyle.Bold);
+            strikeLbl.Location = new System.Drawing.Point(guessLbl.Location.X, guessTxt.Location.Y + guessTxt.Height + 20);
         }
 
         private void HangMan_Resize(object sender, EventArgs e)
@@ -138,7 +142,10 @@ namespace HangMan
             wordLbl.Location = new System.Drawing.Point(50, hangManPic.Height + 50);
 
             gameWordLbl.Font = new System.Drawing.Font("Unispace", (18 + xMod / (600 / 16)), System.Drawing.FontStyle.Bold);
-            gameWordLbl.Location = new System.Drawing.Point(wordLbl.Location.X, wordLbl.Location.Y + 30);
+            gameWordLbl.Location = new System.Drawing.Point(wordLbl.Location.X, wordLbl.Location.Y + 50);
+
+            strikeLbl.Font = new System.Drawing.Font("Unispace", (14 + xMod / (600 / 16)), System.Drawing.FontStyle.Bold);
+            strikeLbl.Location = new System.Drawing.Point(guessLbl.Location.X, guessTxt.Location.Y + guessTxt.Height + 20);
         }
         //menu events
         private void prefBtn_Click(object sender, EventArgs e)
@@ -151,13 +158,14 @@ namespace HangMan
             //reset game text
             gameWordLbl.Text = "";
             //generate words and set all play elements to visible
-            word = words[generator.Next(0, 1)];
+            word = words[generator.Next(0, 3)];
             for (int i = 0; i < word.Length; i++)
             {
                 gameWordLbl.Text += "_ ";
                 letters.Add(" ");
             }
-
+            strike = 0;
+            strikeLbl.Text = "Strikes:" + strike;
             gamePnl.Visible = true;
             gameTmr.Start();
             time = 0;
@@ -188,9 +196,15 @@ namespace HangMan
             {
                 if (time == 5)
                 {
+                    gamePnl.Visible = false;
                     letters.Clear();
                     time = 0;
-                    gamePnl.Visible = false;
+                    guessTxt.Text = null;
+                    strike = 0;
+                    guessedLetters.Clear();
+                    guessedWords.Clear();
+                    letterListbx.DataSource = null;
+                    wordListbx.DataSource = null;
                     gameTmr.Stop();
                 }
             }
@@ -235,78 +249,114 @@ namespace HangMan
         {
             if (e.KeyChar == 13)
             {
-                int complete = 0;
-                int added = 0;
-                int count;
-                string guess = guessTxt.Text.Trim().ToUpper();
-
-                if (guess.Length == 1)
+                if (!hold)
                 {
-                    if (word.Contains(guess))
-                    {
-                        letters.Add(guess);
-                        count = word.Length;
-                        gameWordLbl.Text = "";
-                        for (int i=0; i<count; i++)
-                        {
-                            if (guess == Convert.ToString(word[i]))
-                            {
-                                letters[i] = guess;
-                            }
+                    int complete = 0;
+                    int count;
+                    string guess = guessTxt.Text.Trim().ToUpper();
 
-                            if (letters[i] == Convert.ToString(word[i]))
+                    if (guess.Length == 1)
+                    {
+                        if (guessedLetters.Contains(guess))
+                        {
+                            hold = true;
+                            guessTxt.Text = "Guessed Already";
+                            guessTmr.Start();
+                        }
+                        else
+                        {
+                            if (word.Contains(guess))
                             {
-                                gameWordLbl.Text += letters[i] + " ";
-                                complete += 1;
+                                letters.Add(guess);
+                                count = word.Length;
+                                gameWordLbl.Text = "";
+                                for (int i = 0; i < count; i++)
+                                {
+                                    if (guess == Convert.ToString(word[i]))
+                                    {
+                                        letters[i] = guess;
+                                    }
+                                    if (letters[i] == Convert.ToString(word[i]))
+                                    {
+                                        gameWordLbl.Text += letters[i] + " ";
+                                        complete += 1;
+                                    }
+                                    else
+                                    {
+                                        gameWordLbl.Text += "_ ";
+                                    }
+                                }
+                                if (complete == word.Length)
+                                {
+                                    guessTxt.Text = "Finished";
+                                    time = 0;
+                                    play = false;
+                                }
+                                //refresh listbx
+                                guessedLetters.Add(guess);
+                                letterListbx.DataSource = null;
+                                letterListbx.DataSource = guessedLetters;
+                                guessTxt.Text = null;
                             }
                             else
                             {
-                                gameWordLbl.Text += "_ ";
+                                guessedLetters.Add(guess);
+                                letterListbx.DataSource = null;
+                                letterListbx.DataSource = guessedLetters;
+                                guessTxt.Text = null;
+                                strike += 1;
+                                strikeLbl.Text = "Strikes:" + strike;
                             }
                         }
-                        if (complete == word.Length)
+                    }
+                    else
+                    {
+                        if (guessedWords.Contains(guess))
                         {
-                            guessTxt.Text = "Finished";
-                            time = 0;
-                            play = false;
+                            hold = true;
+                            guessTxt.Text = "Guessed Already";
+                            guessTmr.Start();
+                        }
+                        else
+                        {
+                            if (guess == word)
+                            {
+                                gameWordLbl.Text = "";
+                                count = word.Length;
+                                for (int i = 0; i < count; i++)
+                                {
+                                    gameWordLbl.Text += word[i] + " ";
+                                }
+                                guessTxt.Text = "Finished";
+                                time = 0;
+                                play = false;
+                            }
+                            else
+                            {
+                                guessedWords.Add(guess);
+                                wordListbx.DataSource = null;
+                                wordListbx.DataSource = guessedWords;
+                                guessTxt.Text = null;
+                                strike += 1;
+                                strikeLbl.Text = "Strikes:" + strike;
+                            }
                         }
                     }
-                    else
+                    if (strike == 3)
                     {
-                        guessTxt.Text += "b";
+                        guessTxt.Text = "Failure";
+                        time = 0;
+                        play = false;
                     }
-                    
-                    guessedLetters.Add(guess.ToLower());
-                    if (added > 0)
-                    {
-                        //refresh listbx
-                        letterListbx.DataSource = null;
-                        letterListbx.DataSource = guessedLetters;
-                    }
-                    else
-                    {
-                        //refresh listbx
-                        letterListbx.DataSource = null;
-                        letterListbx.DataSource = guessedLetters;
-                        strike += 1;
-                    }
-                    guessTxt.Text = null;
-                }
-                else if (guess == word)
-                {
-
-                    gameWordLbl.Text = "word";
-                    
-                    
-                    guessTxt.Text = null;
-                    guessTxt.Text += "o";
-                }
-                else
-                {
-                    guessTxt.Text = null;
-                    guessTxt.Text += "h";
                 }
             }
+        }
+
+        private void guessTmr_Tick(object sender, EventArgs e)
+        {
+            hold = false;
+            guessTxt.Text = null;
+            guessTmr.Stop();
         }
     }
 }
