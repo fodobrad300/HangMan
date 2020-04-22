@@ -19,7 +19,9 @@ namespace HangMan
         int minute = 0;
         int strike = 0;
         string word;
-        List<string> words = new List<string>() { "BRADY", "COMPUTER", "ALDWORTH"};
+        List<string> wordsEasy = new List<string>() { "APPLE", "BEE", "CAR", "SKY", "RED", "BLUE"};
+        List<string> wordsMedium = new List<string>() { "BRADY", "COMPUTER", "ALDWORTH" };
+        List<string> wordsHard = new List<string>() { "ZEYPHR"};
         List<string> guessedWords = new List<string>();
         List<string> guessedLetters = new List<string>();
         List<string> letters = new List<string>();
@@ -75,21 +77,30 @@ namespace HangMan
             timeLbl.Font = new System.Drawing.Font("Unispace", (16 + xMod / (600 / 16)), System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             timeLbl.Location = new System.Drawing.Point(ClientSize.Width - (timeLbl.Width + 10), ClientSize.Height - (timeLbl.Height + 10));
 
-            guessLbl.Font = new System.Drawing.Font("Unispace", (14 + xMod / (600 / 16)), System.Drawing.FontStyle.Bold);
+            guessLbl.Font = new System.Drawing.Font("Unispace", (14 + xMod / (600 / 14)), System.Drawing.FontStyle.Bold);
             guessLbl.Location = new System.Drawing.Point(ClientSize.Width - 2 * letterListbx.Width - 20, hangManPic.Height + 10);
 
             guessTxt.Size = new System.Drawing.Size(153 + xMod / (600 / 153), 23 + yMod / (390 / 23));
             guessTxt.Font = new System.Drawing.Font("Unispace", (10 + xMod / (600 / 16)), System.Drawing.FontStyle.Bold);
             guessTxt.Location = new System.Drawing.Point(guessLbl.Location.X, guessLbl.Location.Y + guessLbl.Height + 10);
 
-            wordLbl.Font = new System.Drawing.Font("Unispace", (20 + xMod / (600 / 16)), System.Drawing.FontStyle.Bold);
+            wordLbl.Font = new System.Drawing.Font("Unispace", (20 + xMod / (600 / 20)), System.Drawing.FontStyle.Bold);
             wordLbl.Location = new System.Drawing.Point(50, hangManPic.Height + 50);
 
-            gameWordLbl.Font = new System.Drawing.Font("Unispace", (18 + xMod / (600 / 16)), System.Drawing.FontStyle.Bold);
+            gameWordLbl.Font = new System.Drawing.Font("Unispace", (18 + xMod / (600 / 18)), System.Drawing.FontStyle.Bold);
             gameWordLbl.Location = new System.Drawing.Point(wordLbl.Location.X, wordLbl.Location.Y + 30);
 
-            strikeLbl.Font = new System.Drawing.Font("Unispace", (14 + xMod / (600 / 16)), System.Drawing.FontStyle.Bold);
+            strikeLbl.Font = new System.Drawing.Font("Unispace", (14 + xMod / (600 / 14)), System.Drawing.FontStyle.Bold);
             strikeLbl.Location = new System.Drawing.Point(guessLbl.Location.X, guessTxt.Location.Y + guessTxt.Height + 20);
+
+            difficulty.Size = new System.Drawing.Size(197 + xMod / (600 / 197), 69 + yMod / (390 / 23));
+            difficulty.Location = new System.Drawing.Point(ClientSize.Width / 2, ClientSize.Height / 3);
+
+            modeLbl.Font = new System.Drawing.Font("Unispace", (10 + xMod / (600 / 10)), System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            modeLbl.Location = new System.Drawing.Point(difficulty.Location.X, difficulty.Location.Y + (11 * difficulty.Height / 10));
+
+            difficultyLbl.Font = new System.Drawing.Font("Unispace", (12 + xMod / (600 / 12)), System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            difficultyLbl.Location = new System.Drawing.Point(difficulty.Location.X, difficulty.Location.Y - (15 * difficultyLbl.Height / 10));
         }
 
         private void HangMan_Resize(object sender, EventArgs e)
@@ -135,17 +146,26 @@ namespace HangMan
             guessLbl.Location = new System.Drawing.Point(ClientSize.Width - 2 * letterListbx.Width - 20, hangManPic.Height + 10);
 
             guessTxt.Size = new System.Drawing.Size(153 + xMod / (600 / 153), 23 + yMod / (390 / 23));
-            guessTxt.Font = new System.Drawing.Font("Unispace", (10 + xMod / (600 / 16)), System.Drawing.FontStyle.Bold);
+            guessTxt.Font = new System.Drawing.Font("Unispace", (10 + xMod / (600 / 10)), System.Drawing.FontStyle.Bold);
             guessTxt.Location = new System.Drawing.Point(guessLbl.Location.X, guessLbl.Location.Y + guessLbl.Height + 10);
 
-            wordLbl.Font = new System.Drawing.Font("Unispace", (20 + xMod / (600 / 16)), System.Drawing.FontStyle.Bold);
+            wordLbl.Font = new System.Drawing.Font("Unispace", (20 + xMod / (600 / 20)), System.Drawing.FontStyle.Bold);
             wordLbl.Location = new System.Drawing.Point(50, hangManPic.Height + 50);
 
-            gameWordLbl.Font = new System.Drawing.Font("Unispace", (18 + xMod / (600 / 16)), System.Drawing.FontStyle.Bold);
+            gameWordLbl.Font = new System.Drawing.Font("Unispace", (18 + xMod / (600 / 18)), System.Drawing.FontStyle.Bold);
             gameWordLbl.Location = new System.Drawing.Point(wordLbl.Location.X, wordLbl.Location.Y + 50);
 
-            strikeLbl.Font = new System.Drawing.Font("Unispace", (14 + xMod / (600 / 16)), System.Drawing.FontStyle.Bold);
+            strikeLbl.Font = new System.Drawing.Font("Unispace", (14 + xMod / (600 / 14)), System.Drawing.FontStyle.Bold);
             strikeLbl.Location = new System.Drawing.Point(guessLbl.Location.X, guessTxt.Location.Y + guessTxt.Height + 20);
+
+            difficulty.Size = new System.Drawing.Size(197 + xMod/(600/197), 69 + yMod/(390/23));
+            difficulty.Location = new System.Drawing.Point(ClientSize.Width/2, ClientSize.Height/3);
+
+            modeLbl.Font = new System.Drawing.Font("Unispace", (10 + xMod / (600 / 10)), System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            modeLbl.Location = new System.Drawing.Point(difficulty.Location.X, difficulty.Location.Y + (11*difficulty.Height/10));
+
+            difficultyLbl.Font = new System.Drawing.Font("Unispace", (12 + xMod / (600 / 12)), System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            difficultyLbl.Location = new System.Drawing.Point(difficulty.Location.X, difficulty.Location.Y - (15*difficultyLbl.Height/10));
         }
         //menu events
         private void prefBtn_Click(object sender, EventArgs e)
@@ -158,7 +178,19 @@ namespace HangMan
             //reset game text
             gameWordLbl.Text = "";
             //generate words and set all play elements to visible
-            word = words[generator.Next(0, 3)];
+            if (difficulty.Value == 0)
+            {
+               word = wordsEasy[generator.Next(0, wordsEasy.Count)];
+            }
+            else if (difficulty.Value == 1)
+            {
+                word = wordsMedium[generator.Next(0, wordsMedium.Count)];
+            }
+            else
+            {
+                word = wordsHard[generator.Next(0, wordsHard.Count)];
+            }
+            
             for (int i = 0; i < word.Length; i++)
             {
                 gameWordLbl.Text += "_ ";
