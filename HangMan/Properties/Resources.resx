@@ -118,6 +118,135 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Hangman_Strike1_Seq0001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 1\Hangman_Strike1_Seq0001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hangman_Strike1_Seq0002" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 1\Hangman_Strike1_Seq0002.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hangman_Strike1_Seq0003" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 1\Hangman_Strike1_Seq0003.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hangman_Strike1_Seq0004" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 1\Hangman_Strike1_Seq0004.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hangman_Strike1_Seq0005" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 1\Hangman_Strike1_Seq0005.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hangman_Strike1_Seq0006" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 1\Hangman_Strike1_Seq0006.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hangman_Strike1_Seq0007" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 1\Hangman_Strike1_Seq0007.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hangman_Strike1_Seq0008" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 1\Hangman_Strike1_Seq0008.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hangman_Strike1_Seq0009" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 1\Hangman_Strike1_Seq0009.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hangman_Strike1_Seq0010" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 1\Hangman_Strike1_Seq0010.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hangman_Strike1_Seq0011" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 1\Hangman_Strike1_Seq0011.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hangman_Strike1_Seq0012" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 1\Hangman_Strike1_Seq0012.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hangman_Strike1_Seq0013" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 1\Hangman_Strike1_Seq0013.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hangman_Strike1_Seq0014" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 1\Hangman_Strike1_Seq0014.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Strike0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Strike_20001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 2\Strike_20001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Strike_20002" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 2\Strike_20002.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Strike_20003" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 2\Strike_20003.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Strike_20004" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 2\Strike_20004.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Strike_20005" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 2\Strike_20005.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Strike_20006" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 2\Strike_20006.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Strike_20007" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 2\Strike_20007.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Strike_20008" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 2\Strike_20008.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Strike_20009" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 2\Strike_20009.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Strike_20010" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 2\Strike_20010.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Strike_20011" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 2\Strike_20011.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Strike_20012" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 2\Strike_20012.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Strike_20013" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 2\Strike_20013.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Strike_20014" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 2\Strike_20014.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Strike_30001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 3\Strike_30001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Strike_30002" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 3\Strike_30002.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Strike_30003" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 3\Strike_30003.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Strike_30004" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 3\Strike_30004.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Strike_30005" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 3\Strike_30005.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Strike_30006" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 3\Strike_30006.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Strike_30007" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 3\Strike_30007.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Strike_30008" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 3\Strike_30008.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Strike_30009" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 3\Strike_30009.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Strike_30010" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 3\Strike_30010.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Strike_30011" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 3\Strike_30011.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Strike_30012" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 3\Strike_30012.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Strike_30013" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 3\Strike_30013.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Strike_30014" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hangman Image Sequences\Strike 3\Strike_30014.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Wumpus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Wumpus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

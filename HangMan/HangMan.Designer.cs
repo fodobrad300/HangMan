@@ -33,6 +33,10 @@
             this.prefBtn = new System.Windows.Forms.Button();
             this.playBtn = new System.Windows.Forms.Button();
             this.prefPnl = new System.Windows.Forms.Panel();
+            this.modeLbl = new System.Windows.Forms.Label();
+            this.difficultyLbl = new System.Windows.Forms.Label();
+            this.difficulty = new System.Windows.Forms.TrackBar();
+            this.prefMenuLbl = new System.Windows.Forms.Label();
             this.gamePnl = new System.Windows.Forms.Panel();
             this.strikeLbl = new System.Windows.Forms.Label();
             this.gameWordLbl = new System.Windows.Forms.Label();
@@ -43,18 +47,15 @@
             this.guessLetterLbl = new System.Windows.Forms.Label();
             this.guessWordLbl = new System.Windows.Forms.Label();
             this.wordListbx = new System.Windows.Forms.ListBox();
-            this.hangManPic = new System.Windows.Forms.PictureBox();
             this.letterListbx = new System.Windows.Forms.ListBox();
             this.gameTmr = new System.Windows.Forms.Timer(this.components);
             this.guessTmr = new System.Windows.Forms.Timer(this.components);
-            this.difficulty = new System.Windows.Forms.TrackBar();
-            this.difficultyLbl = new System.Windows.Forms.Label();
-            this.prefMenuLbl = new System.Windows.Forms.Label();
-            this.modeLbl = new System.Windows.Forms.Label();
+            this.imageTmr = new System.Windows.Forms.Timer(this.components);
+            this.hangManPic = new System.Windows.Forms.PictureBox();
             this.prefPnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.difficulty)).BeginInit();
             this.gamePnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hangManPic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.difficulty)).BeginInit();
             this.SuspendLayout();
             // 
             // titleLbl
@@ -101,6 +102,47 @@
             this.prefPnl.TabIndex = 3;
             this.prefPnl.Tag = "";
             this.prefPnl.Visible = false;
+            // 
+            // modeLbl
+            // 
+            this.modeLbl.AutoSize = true;
+            this.modeLbl.Font = new System.Drawing.Font("Unispace", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modeLbl.Location = new System.Drawing.Point(12, 152);
+            this.modeLbl.Name = "modeLbl";
+            this.modeLbl.Size = new System.Drawing.Size(202, 24);
+            this.modeLbl.TabIndex = 7;
+            this.modeLbl.Text = "Easy Medium Hard";
+            // 
+            // difficultyLbl
+            // 
+            this.difficultyLbl.AutoSize = true;
+            this.difficultyLbl.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
+            this.difficultyLbl.Location = new System.Drawing.Point(9, 80);
+            this.difficultyLbl.Name = "difficultyLbl";
+            this.difficultyLbl.Size = new System.Drawing.Size(178, 29);
+            this.difficultyLbl.TabIndex = 6;
+            this.difficultyLbl.Text = "Difficulty:";
+            // 
+            // difficulty
+            // 
+            this.difficulty.Location = new System.Drawing.Point(3, 107);
+            this.difficulty.Maximum = 2;
+            this.difficulty.Name = "difficulty";
+            this.difficulty.Size = new System.Drawing.Size(197, 69);
+            this.difficulty.TabIndex = 5;
+            // 
+            // prefMenuLbl
+            // 
+            this.prefMenuLbl.AutoSize = true;
+            this.prefMenuLbl.Font = new System.Drawing.Font("Unispace", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prefMenuLbl.Location = new System.Drawing.Point(9, 15);
+            this.prefMenuLbl.Name = "prefMenuLbl";
+            this.prefMenuLbl.Size = new System.Drawing.Size(238, 24);
+            this.prefMenuLbl.TabIndex = 0;
+            this.prefMenuLbl.Text = "Return to Main Menu";
+            this.prefMenuLbl.Click += new System.EventHandler(this.prefMenuLbl_Click);
+            this.prefMenuLbl.MouseEnter += new System.EventHandler(this.prefMenuLbl_MouseEnter);
+            this.prefMenuLbl.MouseLeave += new System.EventHandler(this.prefMenuLbl_MouseLeave);
             // 
             // gamePnl
             // 
@@ -218,18 +260,6 @@
             this.wordListbx.Size = new System.Drawing.Size(178, 165);
             this.wordListbx.TabIndex = 2;
             // 
-            // hangManPic
-            // 
-            this.hangManPic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.hangManPic.Image = global::HangMan.Properties.Resources.Wumpus;
-            this.hangManPic.Location = new System.Drawing.Point(4, 14);
-            this.hangManPic.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.hangManPic.Name = "hangManPic";
-            this.hangManPic.Size = new System.Drawing.Size(486, 297);
-            this.hangManPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.hangManPic.TabIndex = 1;
-            this.hangManPic.TabStop = false;
-            // 
             // letterListbx
             // 
             this.letterListbx.FormattingEnabled = true;
@@ -251,46 +281,21 @@
             this.guessTmr.Interval = 1000;
             this.guessTmr.Tick += new System.EventHandler(this.guessTmr_Tick);
             // 
-            // difficulty
+            // imageTmr
             // 
-            this.difficulty.Location = new System.Drawing.Point(3, 107);
-            this.difficulty.Maximum = 2;
-            this.difficulty.Name = "difficulty";
-            this.difficulty.Size = new System.Drawing.Size(197, 69);
-            this.difficulty.TabIndex = 5;
+            this.imageTmr.Tick += new System.EventHandler(this.imageTmr_Tick);
             // 
-            // difficultyLbl
+            // hangManPic
             // 
-            this.difficultyLbl.AutoSize = true;
-            this.difficultyLbl.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
-            this.difficultyLbl.Location = new System.Drawing.Point(9, 80);
-            this.difficultyLbl.Name = "difficultyLbl";
-            this.difficultyLbl.Size = new System.Drawing.Size(178, 29);
-            this.difficultyLbl.TabIndex = 6;
-            this.difficultyLbl.Text = "Difficulty:";
-            // 
-            // prefMenuLbl
-            // 
-            this.prefMenuLbl.AutoSize = true;
-            this.prefMenuLbl.Font = new System.Drawing.Font("Unispace", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.prefMenuLbl.Location = new System.Drawing.Point(9, 15);
-            this.prefMenuLbl.Name = "prefMenuLbl";
-            this.prefMenuLbl.Size = new System.Drawing.Size(238, 24);
-            this.prefMenuLbl.TabIndex = 0;
-            this.prefMenuLbl.Text = "Return to Main Menu";
-            this.prefMenuLbl.Click += new System.EventHandler(this.prefMenuLbl_Click);
-            this.prefMenuLbl.MouseEnter += new System.EventHandler(this.prefMenuLbl_MouseEnter);
-            this.prefMenuLbl.MouseLeave += new System.EventHandler(this.prefMenuLbl_MouseLeave);
-            // 
-            // modeLbl
-            // 
-            this.modeLbl.AutoSize = true;
-            this.modeLbl.Font = new System.Drawing.Font("Unispace", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modeLbl.Location = new System.Drawing.Point(12, 152);
-            this.modeLbl.Name = "modeLbl";
-            this.modeLbl.Size = new System.Drawing.Size(202, 24);
-            this.modeLbl.TabIndex = 7;
-            this.modeLbl.Text = "Easy Medium Hard";
+            this.hangManPic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.hangManPic.Image = global::HangMan.Properties.Resources.Strike0;
+            this.hangManPic.Location = new System.Drawing.Point(4, 14);
+            this.hangManPic.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.hangManPic.Name = "hangManPic";
+            this.hangManPic.Size = new System.Drawing.Size(486, 297);
+            this.hangManPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.hangManPic.TabIndex = 1;
+            this.hangManPic.TabStop = false;
             // 
             // HangMan
             // 
@@ -311,10 +316,10 @@
             this.Resize += new System.EventHandler(this.HangMan_Resize);
             this.prefPnl.ResumeLayout(false);
             this.prefPnl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.difficulty)).EndInit();
             this.gamePnl.ResumeLayout(false);
             this.gamePnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hangManPic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.difficulty)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -344,6 +349,7 @@
         private System.Windows.Forms.TrackBar difficulty;
         private System.Windows.Forms.Label modeLbl;
         private System.Windows.Forms.Label prefMenuLbl;
+        private System.Windows.Forms.Timer imageTmr;
     }
 }
 

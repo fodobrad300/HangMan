@@ -86,5 +86,134 @@
   <ItemGroup>
     <None Include="Resources\Wumpus.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 3\Strike_30001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 3\Strike_30002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 3\Strike_30003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 3\Strike_30004.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 3\Strike_30005.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 3\Strike_30006.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 3\Strike_30007.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 3\Strike_30008.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 3\Strike_30009.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 3\Strike_30010.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 3\Strike_30011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 3\Strike_30012.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 3\Strike_30013.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 3\Strike_30014.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 2\Strike_20001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 2\Strike_20002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 2\Strike_20003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 2\Strike_20004.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 2\Strike_20005.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 2\Strike_20006.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 2\Strike_20007.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 2\Strike_20008.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 2\Strike_20009.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 2\Strike_20010.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 2\Strike_20011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 2\Strike_20012.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 2\Strike_20013.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 2\Strike_20014.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 1\Hangman_Strike1_Seq0001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 1\Hangman_Strike1_Seq0002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 1\Hangman_Strike1_Seq0003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 1\Hangman_Strike1_Seq0004.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 1\Hangman_Strike1_Seq0005.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 1\Hangman_Strike1_Seq0006.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 1\Hangman_Strike1_Seq0007.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 1\Hangman_Strike1_Seq0008.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 1\Hangman_Strike1_Seq0009.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 1\Hangman_Strike1_Seq0010.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 1\Hangman_Strike1_Seq0011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 1\Hangman_Strike1_Seq0012.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 1\Hangman_Strike1_Seq0013.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike 1\Hangman_Strike1_Seq0014.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangman Image Sequences\Strike0.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
